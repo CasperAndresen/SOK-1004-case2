@@ -85,6 +85,20 @@ Lag en figur som viser karbonintensiteten $CI_{t}$ til de fem største økonomie
 
 ```{r}
 # Løs oppgave Ib her
+df %>%
+  drop_na(gdp, co2) %>%
+  
+  mutate(gdp = gdp/10^12) %>%
+
+  mutate(co2 = co2/10^3) %>%
+  
+  mutate(ci = (co2/gdp)) %>%
+
+  filter(country %in% list, year %in% c(1850:2020)) %>%
+  
+  ggplot(aes(x=year, y=ci, color = country)) %>%
+  
+  + geom_line()
 ```
 
 *\[Besvar oppgave 1b her\]*
@@ -97,6 +111,8 @@ Undersøk hvorvidt bruken av kull som energikilde kan forklare forskjellen i kar
 
 ```{r}
 # besvar oppgave 1c her
+
+#sammenlikne ci og mengde kull
 ```
 
 *\[Besvar oppgave Ic her\]*
