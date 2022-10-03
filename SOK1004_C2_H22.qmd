@@ -102,6 +102,7 @@ df %>%
   
   ggplot(aes(x=year, y=ci, color = country)) %>%
   
+<<<<<<< HEAD
   + labs(y = "Karbonintensitet", x = "År", title = "Karbonintensitet over tid", color = "Country") %>%
    
   + geom_line() %>% 
@@ -111,6 +112,9 @@ df %>%
   + theme_bw()
 
 
+=======
+  + geom_line()
+>>>>>>> 40f2735efbb46ac4e542b1c314fc40cd85d11ad6
 ```
 
 *Figuren viser oss mengden karbonintensitet CO2 delt på BNP for de fem største økonomiene i verden. Altså viser den oss hvor mye CO2 i kilogram som ble brukt for å øke verdiskapningen med 1 USD.*
@@ -129,6 +133,7 @@ Undersøk hvorvidt bruken av kull som energikilde kan forklare forskjellen i kar
 
 ```{r}
 # besvar oppgave 1c her
+<<<<<<< HEAD
 df %>%
   drop_na(coal_co2) %>%
 
@@ -143,6 +148,10 @@ df %>%
   + geom_smooth(se = FALSE) %>%
   
   + theme_bw()
+=======
+
+#sammenlikne ci og mengde kull
+>>>>>>> 40f2735efbb46ac4e542b1c314fc40cd85d11ad6
 ```
 
 **Figur 2 - Karbonintensitet**
